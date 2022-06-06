@@ -1,0 +1,60 @@
+.btn {
+  display: flex;
+  align-items: center;
+  border-radius: $borderRadius;
+  padding: 14px 22px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $white;
+  letter-spacing: -0.01em;
+  @include transition(background, border);
+
+  &:hover,
+  &:focus {
+    background-color: #5897db;
+  }
+
+  &:active {
+    background-color: #0c4a8f;
+  }
+
+  &:disabled {
+    background-color: $gray5;
+  }
+
+  &-primary {
+    background-color: $primary;
+  }
+
+  &-secondary {
+    background-color: $secondary4;
+  }
+
+  &-outline {
+    border: 2px solid $primary;
+    color: $primary;
+    background-color: $white;
+
+    &:hover,
+    &:focus {
+      border-color: #5897db;
+      background-color: #a0c3eb;
+    }
+
+    &:active {
+      background-color: #cfe1f5;
+    }
+
+    &:disabled {
+      border-width: 1px;
+      border-color: $gray5;
+      color: $gray5;
+      opacity: 0.5;
+    }
+  }
+
+  &-icon {
+    margin-right: 12px;
+  }
+}

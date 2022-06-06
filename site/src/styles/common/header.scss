@@ -1,0 +1,21 @@
+.header {
+  margin-bottom: 50px;
+  background-color: $primary;
+  box-shadow: $boxShadow;
+  &-container {
+    display: flex;
+    align-items: center;
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+
+  &-logo {
+    font-family: $extraFont;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 56px;
+    color: $white;
+  }
+}
+
+@import '../includes/nav';

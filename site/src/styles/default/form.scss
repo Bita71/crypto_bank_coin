@@ -1,0 +1,60 @@
+.form {
+  display: grid;
+  grid-template-columns: max-content auto;
+  align-items: center;
+  gap: 25px 18px ;
+
+  &-span {
+    grid-column: 1/2;
+    justify-self: flex-end;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $secondary1;
+  }
+
+  &-input {
+    grid-column: 2/3;
+    border: 1px solid $gray5;
+    border-radius: $borderRadius;
+    height: 44px;
+    width: 100%;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $gray2;
+    @include transition(border, background-color, color);
+
+    &::placeholder {
+      color: $gray4;
+    }
+
+    &:focus,
+    &:hover {
+      border-color: $primary;
+      background-color: #a0c3ff1a;
+    }
+
+    &:hover {
+      background-color: #a0c3ff0d;
+
+      &::placeholder {
+        color: $gray5;
+      }
+    }
+
+    &:disabled::placeholder {
+      cursor: auto;
+      color: $gray5;
+    }
+
+    &.error {
+      border-color: #ba0000;
+    }
+
+    &.success {
+      border-color: #76ca66;
+    }
+  }
+}

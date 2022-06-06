@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+@import '../utils/variables';
+@import '../mixins/code';
+@import '../default/resets';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  padding-bottom: 50px;
+  font-family: $mainFont;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23px;
+}
+
+.main {
+  position: relative;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.visually-hidden {
+  position: absolute;
+  display: inline-block;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.is-close {
+  display: none;
+}
+
+@import '../default/btns';
+@import '../default/titles';
+@import '../default/form';
+@import '../default/select';

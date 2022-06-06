@@ -1,0 +1,26 @@
+.nav {
+  display: none;
+  margin-right: 0;
+  margin-left: auto;
+
+  &.open {
+    display: block;
+  }
+
+  &-list {
+    display: flex;
+  }
+
+  &-item {
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+
+  &-btn {
+    &.active {
+      background-color: #a0c3ff;
+      cursor: auto;
+    }
+  }
+}

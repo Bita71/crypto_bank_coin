@@ -1,0 +1,125 @@
+.hystory {
+  &-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 288px 288px auto;
+    gap: 50px;
+
+    & .account-hystory {
+      grid-column: span 1;
+      display: flex;
+      flex-direction: column;
+      cursor: auto;
+    }
+    & .account-balance {
+      cursor: auto;
+    }
+  }
+
+  &-pagination {
+    display: flex;
+    margin: 25px auto 0;
+
+    &-list {
+      display: flex;
+    }
+
+    &-item {
+      display: none;
+
+      &:not(:nth-child(6n)) {
+        margin-right: 5px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.open {
+        display: block;
+      }
+    }
+
+    &-btn {
+      padding: 8px 15px;
+      font-weight: 700;
+      line-height: 24px;
+      color: $gray5;
+      background-color: transparent;
+
+      @include transition(color, background-color);
+      &:hover,
+      &:focus,
+      &:active,
+      &.active {
+        color: $white;
+      }
+
+      &.active {
+        background-color: $primary;
+      }
+    }
+
+    &-arrow {
+      padding: 8px 15px;
+      background-color: transparent;
+
+      &.left {
+        margin-right: 5px;
+      }
+
+      &.right {
+        margin-left: 5px;
+        transform: rotate(180deg);
+      }
+
+      & svg path {
+        @include transition(stroke);
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        & svg path {
+          stroke: $white;
+        }
+      }
+
+      &:disabled {
+        cursor: auto;
+        background-color: transparent;
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: transparent;
+
+          & svg path {
+            stroke: #9ca3af;
+          }
+        }
+      }
+    }
+
+    &-ellipsis {
+      display: none;
+      align-self: flex-end;
+      font-family: $extraFont;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: $gray5;
+
+      &.left {
+        margin-right: 5px;
+      }
+
+      &.right {
+        margin-left: 5px;
+      }
+
+      &.open {
+        display: block;
+      }
+    }
+  }
+}
